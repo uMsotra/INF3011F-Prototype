@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>Reimagining sports, cultural, and heritage preservation.</title>
+    <link rel="stylesheet" type="text/css" href="3DArtMuseum.css">
+    <style>
+        /* Additional futuristic styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        #pleasewait {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 800;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            animation: loading 20s linear forwards; /* 10 seconds loading animation */
+        }
+
+        @keyframes loading {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        #pleasewait img {
+            width: 300px; /* Adjust size as needed */
+            height: auto;
+        }
+
+        #pleasewait b {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #buttonenter {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 801;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #buttonenter div {
+            border-radius: 30px;
+            padding: 15px 25px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #000;
+            background-color: #fff;
+            box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #buttonenter div:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Additional futuristic styling for controls and info */
+        #controls, #info {
+            font-size: 14px;
+            color: #ccc;
+            position: absolute;
+            z-index: 702;
+        }
+
+        #controls_minus, #controls_plus {
+            filter: invert(1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #controls_minus:hover, #controls_plus:hover {
+            transform: scale(1.1);
+        }
+
+        #info {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            display: none;
+        }
+
+        #about {
+            right: 20px;
+            top: 20px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+<div id="pleasewait">
+    <div style="background-color: #fff; padding: 20px; border-radius: 15px;">
+        <img src="3DArtMuseum.png" alt="logo">
+    </div>
+
+    <div id="pleasewaitcontainer">
+        <div class="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <b>Loading... Please wait as we fetch sports, culture, and heritage from secure storage around the world.</b>
+</div>
+
+<div id="buttonenter"><div>Start the virtual tour</div></div>
+<div id="content"><div id="container"></div></div>
+<div id="controls"><div id="controls_minus"></div><div id="controls_plus"></div></div>
+<div id="info"><div id="infotext"></div></div>
+<div id="about">INF3011 Team 12</div>
+
+<script src="3DArtMuseumPleaseRotate.js"></script>
+<script src="3DArtMuseum.js"></script>
+		<script>
+
+drawRoom();
+
+addToLeft(35,  200, "Art_01.jpg", "Art_01.mp3", "Gwamaka Mwalemba, a legend among students for all the wrong reasons. His tests were like mazes, leading many to the dreaded supplementary exams. He allowed cheat sheets, but they were like maps to nowhere. Ironically, the painting, originally owned by Leonardo, now resides at UCT, brought to Cape Town by Van Riebeek.");
+addToLeft(22,  125, "Art_02.jpg", "Art_02.mp3", "The Scream is the title of four paintings by Norwegian artist Edvard Munch. The most famous version is housed in the National Gallery of Norway and was completed in 1893. Two other versions of the painting are in the Munch Museum, while the fourth version belongs to a private collection. In 1895, Munch also made a lithograph with the same title.");
+addToLeft(20,   50, "Art_03.jpg", "Art_03.mp3", "The Portrait of Lisa Gherardini, wife of Francesco del Giocondo, better known as the Mona Lisa, is a painting by the Italian Renaissance artist Leonardo da Vinci. It was acquired by King Francis I of France in the early 16th century and has been owned by the French State ever since. It is displayed at the Louvre Museum in Paris, being undoubtedly the jewel of its collections. Its name, the Mona Lisa, derives from the most accepted thesis about the identity of the model: the wife of Francesco Bartolomeo de Giocondo, who was actually named Lisa Gherardini, hence her other name: Mona (lady, in old Italian) Lisa. The Louvre Museum accepts the full title indicated at the beginning as the original title of the work, although it does not recognize the identity of the model and only accepts it as a hypothesis.");
+addToLeft(46,  -50, "Art_04.jpg", "Art_04.mp3", "The Last Supper is an original mural painting by Leonardo da Vinci executed between 1495 and 1498. It is located on the wall where it was originally painted, in the refectory of the Dominican convent of Santa Maria delle Grazie in Milan, declared a UNESCO World Heritage Site in 1980. The painting was commissioned by his patron, Duke Ludovico Sforza of Milan. It is not a traditional fresco, but a mural executed in tempera and oil on two layers of plaster spread on plaster.");
+addToLeft(28, -160, "Art_05.jpg", "Art_05.mp3", "Las Meninas or The Family of Philip IV is considered the masterpiece of Spanish Golden Age painter Diego Velázquez. Finished in 1656, according to Antonio Palomino, a date unanimously accepted by critics, it corresponds to the artist's last stylistic period, that of full maturity. It is an oil painting on a large canvas formed by three vertically sewn bands of fabric, where the figures in the foreground are represented at life size. It is one of the most analyzed and commented-on works of art in the world.");
+
+addToFront(40, -320, "Art_06.jpg", "Art_06.mp3", "The Persistence of Memory, also known as The Melting Clocks or The Soft Watches, is a famous painting by Spanish artist Salvador Dalí painted in 1931. The painting was exhibited in Dalí's first solo exhibition at the Galerie Pierre Colle in Paris from June 3 to 15, 1931, and in January 1932 at an exhibition at the Julien Levy Gallery in New York. It is housed at the MoMA (Museum of Modern Art) in New York, where it arrived in 1934. It was created using the oil on canvas technique with a surrealist style.");
+addToFront(27, -250, "Art_07.jpg", "Art_07.mp3", "The Last Judgment or The Universal Judgment is the fresco mural painted by Michelangelo to decorate the apse of the Sistine Chapel. He began painting it 25 years after finishing the ceiling of the chapel.");
+addToFront(53, -170, "Art_08.jpg", "Art_08.mp3", "The Creation of Adam is a fresco on the ceiling of the Sistine Chapel, painted by Michelangelo around the year 1511. It illustrates the biblical episode of Genesis in which God gives life to Adam, the first man. Chronologically, it is the fourth of the panels representing episodes of Genesis on the ceiling of the chapel, it was one of the last to be completed and is one of the most appreciated and recognized works of art in the world.");
+addToFront(47,  -80, "Art_09.jpg", "Art_09.mp3", "A Sunday Afternoon on the Island of La Grande Jatte is a painting by French neo-impressionist artist Georges Seurat, considered by many to be one of the most relevant paintings of the 19th century.");
+addToFront(36,    0, "Art_10.jpg", "Art_10.mp3", "The Night Watch or The Night Watch is the common name for this masterpiece by Dutch painter Rembrandt, painted between 1640 and 1642. This painting is one of the jewels of the permanent exhibition at the Rijksmuseum in Amsterdam, specializing in Dutch art.");
+
+addToRight(47, -160, "Art_11.jpg", "Art_11.mp3", "The Birth of Venus is a painting by Sandro Botticelli. It represents one of the Italian master's greatest works. It was made in egg tempera on canvas and is preserved in the Uffizi Gallery in Florence. It has traditionally been believed that this work was commissioned by Lorenzo di Pierfrancesco de' Medici, cousin of Lorenzo the Magnificent, to decorate the Villa di Castello, in the Florentine countryside. Recent studies indicate that The Birth of Venus was commissioned by someone else for a different location. Therefore, the exact date of its composition is not known, nor is the patron for whom it was executed.");
+addToRight(50,  -50, "Art_12.jpg", "Art_12.mp3", "Guernica is a famous painting by Pablo Picasso, painted between May and June 1937, whose title refers to the bombing of Guernica, which occurred on April 26 of that year, during the Spanish Civil War. It was commissioned by the Director General of Fine Arts, Josep Renau, at the request of the Government of the Second Spanish Republic to be exhibited in the Spanish pavilion during the 1937 International Exposition in Paris, in order to attract public attention to the Republican cause in the midst of the Spanish Civil War.");
+addToRight(37,   50, "Art_13.jpg", "Art_13.mp3", "The Bedroom in Arles is a painting by Vincent van Gogh that depicts the painter's bedroom during his stay in the French city of Arles, a motif he painted three nearly identical pictures of. The first, preserved in the Van Gogh Museum in Amsterdam, was executed in October 1888 and was damaged in a flood during the painter's hospitalization. Nearly a year later, he began making two copies: one, of the same dimensions, is preserved today in the Art Institute of Chicago; the other, in the Musée d'Orsay, made for his family in the Netherlands, is smaller in size.");
+addToRight(26,  125, "Art_14.jpg", "Art_14.mp3", "Girl with a Pearl Earring, also known as Girl with a Turban, The Dutch Mona Lisa, and The Mona Lisa of the North, is one of the masterpieces of Dutch painter Johannes Vermeer, painted between 1665 and 1667, and, as the name implies, it features a pearl earring as its focal point. The painting is currently housed in the Mauritshuis museum in The Hague.");
+addToRight(21,  200, "Art_15.jpg", "Art_15.mp3", "The Kiss is a work by Austrian painter Gustav Klimt and probably his best-known work. It is an oil painting with gold and tin leaf on a canvas measuring 180 x 180 centimeters, made between 1907 and 1908. This work, which follows the canons of Symbolism, is a canvas with decorations and mosaics on a gold background. It is exhibited in the Österreichische Galerie Belvedere in Vienna. Klimt's works usually caused scandals and were criticized as \"pornographic\" and for being \"excessively perverted\".");
+
+addToBack(42,    0, "Art_16.jpg", "Art_16.mp3", "Primavera, or Allegory of Spring, is one of the masterpieces of Italian Renaissance painter Sandro Botticelli. It is made in egg tempera on board. It measures 203 cm high and 314 cm wide and was made between 1480 and 1481. An inventory from 1499, which was not discovered until 1975, lists the property of Lorenzo di Pierfrancesco and his brother Giovanni and allows us to affirm that in the 15th century, La Primavera was on a \"divan\" in an anteroom adjacent to Lorenzo di Pierfrancesco's rooms in the city of Florence. It must have later been moved to the Medici villa in Castello, where Vasari placed it in 1551, saying that it represented \"Venus, adorned with flowers by the Graces, announcing the arrival of spring\".");
+addToBack(42,  -80, "Art_17.jpg", "Art_17.mp3", "Impression, Sunrise is a painting by French artist Claude Monet, which gave its name to the Impressionist movement. It is housed in the Musée Marmottan Monet in Paris. Painted around 1872, it depicts the port of Le Havre, the city where Monet spent much of his childhood. The painting was stolen from the Musée Marmottan-Monet in 1985 and recovered in 1990. Since 1991, it has been back on display.");
+addToBack(25, -170, "Art_18.jpg", "Art_18.mp3", "Café Terrace at Night is a painting by Dutch artist Vincent Van Gogh made in Arles in September 1888, representing the atmosphere of a terrace. In this painting, Van Gogh expressed his new impressions of southern France. The work depicts a café in the city of Arles, then called \"Café Terrace,\" which was later renamed \"Café Van Gogh.\" The style of this painting is unique for Van Gogh with warm colors and the depth of perspective. This is the first painting in which Vincent used starry backgrounds.");
+addToBack(42, -250, "Art_19.jpg", "Art_19.mp3", "The School of Athens is one of the most outstanding paintings by artist Raphael Sanzio. It was sketched between 1509 and 1510 and painted between 1510 and 1512 as part of a commission to decorate the rooms that are now known as the Raphael Rooms, located in the Apostolic Palace of the Vatican City. The Stanza della Segnatura was the first to be decorated, and The School of Athens was the second painting to be completed, after The Disputation of the Sacrament.");
+addToBack(27, -320, "Art_20.jpg", "Art_20.mp3", "The Son of Man is a painting from 1964 by Belgian surrealist painter René Magritte, and his best-known work. Magritte painted it as a self-portrait. The painting consists of a man in a coat, red tie, and bowler hat standing in front of a wall. Beyond him, the sea and a cloudy sky can be seen. The man's face is largely obscured by a floating green apple. However, the man's eyes can be seen peering over the edge of the apple.");
+
+renderRoom();
+
+welcome("Welcome.mp3", "Welcome to the virtual art museum developed by Team 12. Click or tap on an artwork to zoom in and learn its history.");
+
+		</script>
+	</body>
+</html>
